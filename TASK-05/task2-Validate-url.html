@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Validate Safe URL Protocol</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #f5f5f5; }
+    h2 { color: #1F3864; }
+    .box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 16px 0; }
+    .label { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+    .output { border-left: 4px solid #2e75b6; padding: 10px 14px; font-family: monospace; font-size: 14px; margin: 6px 0; }
+    .invalid { background: #fdecea; }
+    .safe    { background: #e8f5e9; }
+  </style>
+</head>
+<body>
+  <h2>Task 2: Validate Safe URL Protocol</h2>
+
+  <div class="box">
+    <div class="label">Function</div>
+    <pre>
+function validateURL(url) {
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    console.log("Safe URL");
+  } else {
+    console.log("Invalid URL");
+  }
+}
+    </pre>
+  </div>
+
+  <div class="box">
+    <div class="label">Test Results</div>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    function validateURL(url) {
+      return (url.startsWith("http://") || url.startsWith("https://"))
+        ? "Safe URL"
+        : "Invalid URL";
+    }
+
+    const tests = [
+      "javascript:alert(1)",
+      "https://example.com",
+      "http://example.com",
+      "data:text/html,<h1>hi</h1>"
+    ];
+
+    const container = document.getElementById("results");
+    tests.forEach(url => {
+      const result = validateURL(url);
+      const div = document.createElement("div");
+      div.className = "output " + (result === "Safe URL" ? "safe" : "invalid");
+      div.textContent = `"${url}"  →  ${result}`;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
