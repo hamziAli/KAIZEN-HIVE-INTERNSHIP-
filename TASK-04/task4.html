@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Basics – Task Solutions</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 24px; color: #222; }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 32px; }
+    .task { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.1); margin-bottom: 28px; overflow: hidden; }
+    .task-header { background: #2c3e50; color: #fff; padding: 12px 20px; font-size: 1.05em; font-weight: bold; }
+    .task-body { padding: 20px; }
+    .section-label { font-size: 0.78em; font-weight: bold; color: #777; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; margin-top: 14px; }
+    pre.code { background: #1e1e2e; color: #cdd6f4; border-radius: 6px; padding: 14px 16px; font-size: 0.9em; overflow-x: auto; white-space: pre-wrap; margin: 0; }
+    .output-box { background: #eaf4ea; border-left: 4px solid #27ae60; border-radius: 4px; padding: 12px 16px; font-family: monospace; font-size: 0.95em; color: #1a5c1a; margin: 0; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Basics – Task Solutions</h1>
+
+<!-- ===== TASK 1 ===== -->
+<div class="task">
+  <div class="task-header">Task 1: Greeting Message Function</div>
+  <div class="task-body">
+    <div class="section-label">JavaScript Code</div>
+    <pre class="code">function greet(name) {
+  return "Hello " + name + ", welcome to Web Development!";
+}
+
+const message = greet("Ali");
+console.log(message);</pre>
+    <div class="section-label">Output</div>
+    <div class="output-box" id="out1"></div>
+  </div>
+</div>
+
+<!-- ===== TASK 2 ===== -->
+<div class="task">
+  <div class="task-header">Task 2: Add Two Numbers</div>
+  <div class="task-body">
+    <div class="section-label">JavaScript Code</div>
+    <pre class="code">const num1 = 12;
+const num2 = 8;
+const sum = num1 + num2;
+
+console.log("Sum: " + sum);</pre>
+    <div class="section-label">Output</div>
+    <div class="output-box" id="out2"></div>
+  </div>
+</div>
+
+<!-- ===== TASK 3 ===== -->
+<div class="task">
+  <div class="task-header">Task 3: Even or Odd Checker</div>
+  <div class="task-body">
+    <div class="section-label">JavaScript Code</div>
+    <pre class="code">const number = 17;
+
+if (number % 2 === 0) {
+  console.log("Even Number");
+} else {
+  console.log("Odd Number");
+}</pre>
+    <div class="section-label">Output</div>
+    <div class="output-box" id="out3"></div>
+  </div>
+</div>
+
+<!-- ===== TASK 4 ===== -->
+<div class="task">
+  <div class="task-header">Task 4: Grade Calculator</div>
+  <div class="task-body">
+    <div class="section-label">JavaScript Code</div>
+    <pre class="code">const marks = 76;
+let grade;
+
+if (marks >= 80) {
+  grade = "A";
+} else if (marks >= 60) {
+  grade = "B";
+} else if (marks >= 40) {
+  grade = "C";
+} else {
+  grade = "Fail";
+}
+
+console.log("Grade: " + grade);</pre>
+    <div class="section-label">Output</div>
+    <div class="output-box" id="out4"></div>
+  </div>
+</div>
+
+<!-- ===== TASK 5 ===== -->
+<div class="task">
+  <div class="task-header">Task 5: Celsius to Fahrenheit Converter</div>
+  <div class="task-body">
+    <div class="section-label">JavaScript Code</div>
+    <pre class="code">const celsius = 25;
+const fahrenheit = celsius * 9 / 5 + 32;
+
+console.log("Fahrenheit: " + fahrenheit);</pre>
+    <div class="section-label">Output</div>
+    <div class="output-box" id="out5"></div>
+  </div>
+</div>
+
+<script>
+  // Task 1
+  function greet(name) {
+    return "Hello " + name + ", welcome to Web Development!";
+  }
+  document.getElementById("out1").textContent = greet("Ali");
+
+  // Task 2
+  const num1 = 12, num2 = 8;
+  document.getElementById("out2").textContent = "Sum: " + (num1 + num2);
+
+  // Task 3
+  const number = 17;
+  document.getElementById("out3").textContent = number % 2 === 0 ? "Even Number" : "Odd Number";
+
+  // Task 4
+  const marks = 76;
+  let grade;
+  if (marks >= 80) grade = "A";
+  else if (marks >= 60) grade = "B";
+  else if (marks >= 40) grade = "C";
+  else grade = "Fail";
+  document.getElementById("out4").textContent = "Grade: " + grade;
+
+  // Task 5
+  const celsius = 25;
+  document.getElementById("out5").textContent = "Fahrenheit: " + (celsius * 9 / 5 + 32);
+</script>
+
+</body>
+</html>
