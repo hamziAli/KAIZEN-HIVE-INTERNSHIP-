@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1: Escape HTML Before Display</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #f5f5f5; }
+    h2 { color: #1F3864; }
+    .box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 16px 0; }
+    .label { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+    .output { background: #e8f5e9; border-left: 4px solid #2e75b6; padding: 10px 14px; font-family: monospace; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>Task 1: Escape HTML Before Display</h2>
+
+  <div class="box">
+    <div class="label">Function</div>
+    <pre>
+function escapeHTML(input) {
+  return input
+    .replace(/&amp;/g, "&amp;amp;")
+    .replace(/&lt;/g, "&amp;lt;")
+    .replace(/&gt;/g, "&amp;gt;")
+    .replace(/"/g,  "&amp;quot;")
+    .replace(/'/g,  "&amp;#039;");
+}
+    </pre>
+  </div>
+
+  <div class="box">
+    <div class="label">Input</div>
+    <code>&lt;b&gt;Hello&lt;/b&gt;</code>
+
+    <div class="label" style="margin-top:14px;">Output</div>
+    <div class="output" id="result"></div>
+  </div>
+
+  <script>
+    function escapeHTML(input) {
+      return input
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    const userInput = "<b>Hello</b>";
+    document.getElementById("result").textContent = escapeHTML(userInput);
+  </script>
+</body>
+</html>
