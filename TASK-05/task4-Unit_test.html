@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4: Unit Test for Add Function</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #f5f5f5; }
+    h2 { color: #1F3864; }
+    .box { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 16px 0; }
+    .label { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+    .output { border-left: 4px solid #2e75b6; padding: 10px 14px; font-family: monospace; font-size: 15px; }
+    .passed { background: #e8f5e9; color: #2e7d32; }
+    .failed { background: #fdecea; color: #c62828; }
+  </style>
+</head>
+<body>
+  <h2>Task 4: Simple Unit Test for Add Function</h2>
+
+  <div class="box">
+    <div class="label">Function &amp; Test</div>
+    <pre>
+function add(a, b) {
+  return a + b;
+}
+
+function testAdd() {
+  const result   = add(2, 3);
+  const expected = 5;
+
+  if (result === expected) {
+    console.log("Test Passed");
+  } else {
+    console.log(`Test Failed: expected ${expected}, got ${result}`);
+  }
+}
+
+testAdd();
+    </pre>
+  </div>
+
+  <div class="box">
+    <div class="label">Output</div>
+    <div class="output" id="result"></div>
+  </div>
+
+  <script>
+    function add(a, b) {
+      return a + b;
+    }
+
+    function testAdd() {
+      const result   = add(2, 3);
+      const expected = 5;
+
+      const el = document.getElementById("result");
+      if (result === expected) {
+        el.textContent = "Test Passed";
+        el.classList.add("passed");
+      } else {
+        el.textContent = `Test Failed: expected ${expected}, got ${result}`;
+        el.classList.add("failed");
+      }
+    }
+
+    testAdd();
+  </script>
+</body>
+</html>
