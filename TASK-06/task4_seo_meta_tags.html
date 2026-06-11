@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Viewport meta tag for responsive behaviour -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Page title -->
+  <title>Web Development Course</title>
+
+  <!-- SEO: Meta description -->
+  <meta name="description" content="Learn HTML, CSS, and JavaScript basics.">
+
+  <!-- Additional recommended SEO meta tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Web Development Course">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 60px 40px; }
+
+    h2 { color: #1F3864; margin-bottom: 24px; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 28px 32px;
+      max-width: 680px;
+    }
+
+    .tag-block {
+      background: #f0f4f8;
+      border-left: 4px solid #2e75b6;
+      border-radius: 0 6px 6px 0;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+    }
+    .tag-block code {
+      display: block;
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      color: #1a1a1a;
+      white-space: pre;
+    }
+    .tag-label {
+      font-size: 11px;
+      font-weight: bold;
+      color: #2e75b6;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    /* Google-style SERP preview */
+    .serp-preview {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      max-width: 600px;
+    }
+    .serp-title { font-size: 18px; color: #1a0dab; cursor: pointer; }
+    .serp-title:hover { text-decoration: underline; }
+    .serp-url   { font-size: 13px; color: #006621; margin: 2px 0 4px; }
+    .serp-desc  { font-size: 14px; color: #545454; line-height: 1.5; }
+    .serp-label { font-size: 12px; color: #888; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Task 4: Basic SEO Meta Tags</h2>
+
+  <div class="card">
+
+    <div class="tag-block">
+      <div class="tag-label">Title tag</div>
+      <code>&lt;title&gt;Web Development Course&lt;/title&gt;</code>
+    </div>
+
+    <div class="tag-block">
+      <div class="tag-label">Meta description</div>
+      <code>&lt;meta name="description"
+      content="Learn HTML, CSS, and JavaScript basics."&gt;</code>
+    </div>
+
+    <div class="tag-block">
+      <div class="tag-label">Viewport meta tag</div>
+      <code>&lt;meta name="viewport"
+      content="width=device-width, initial-scale=1.0"&gt;</code>
+    </div>
+
+    <!-- SERP preview -->
+    <div class="serp-label" style="margin-top:28px;">Search engine result preview:</div>
+    <div class="serp-preview">
+      <div class="serp-title">Web Development Course</div>
+      <div class="serp-url">https://www.example.com/course</div>
+      <div class="serp-desc">Learn HTML, CSS, and JavaScript basics.</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
