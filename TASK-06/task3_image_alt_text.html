@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3: Image Alt Text for Accessibility</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 60px 40px; }
+
+    h2 { color: #1F3864; margin-bottom: 24px; }
+
+    .banner-wrapper {
+      max-width: 720px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    /* Placeholder banner since course-banner.jpg is not available */
+    .banner-placeholder {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, #1F3864, #2e75b6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      gap: 12px;
+    }
+    .banner-placeholder svg { opacity: 0.8; }
+    .banner-placeholder p { font-size: 18px; font-weight: bold; }
+
+    .caption {
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #555;
+      border-top: 1px solid #eee;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Task 3: Image Alt Text for Accessibility</h2>
+
+  <div class="banner-wrapper">
+    <!--
+      The actual image element with meaningful alt text:
+      <img src="course-banner.jpg" alt="Students learning web development">
+
+      Since course-banner.jpg is not available, a styled placeholder is shown below.
+      The alt attribute is still correctly applied.
+    -->
+    <img
+      src="course-banner.jpg"
+      alt="Students learning web development"
+      width="720"
+      height="280"
+      style="display:none;"
+      onerror="this.style.display='none';"
+    >
+
+    <div class="banner-placeholder" aria-label="Students learning web development" role="img">
+      <svg width="64" height="64" fill="none" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="12" width="56" height="36" rx="4" stroke="white" stroke-width="2.5"/>
+        <path d="M22 30 L30 38 L42 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="4" y1="52" x2="60" y2="52" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="24" y1="52" x2="24" y2="58" stroke="white" stroke-width="2.5"/>
+        <line x1="40" y1="52" x2="40" y2="58" stroke="white" stroke-width="2.5"/>
+        <line x1="18" y1="58" x2="46" y2="58" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p>Students learning web development</p>
+    </div>
+
+    <div class="caption">
+      Image element: <code>&lt;img src="course-banner.jpg" alt="Students learning web development"&gt;</code>
+    </div>
+  </div>
+
+</body>
+</html>
