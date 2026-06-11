@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2: Accessible Form Labels</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; display: flex; justify-content: center; padding: 60px 20px; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 36px 40px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    h2 { color: #1F3864; margin-bottom: 24px; font-size: 20px; }
+
+    .form-group { margin-bottom: 20px; }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: #2e75b6; box-shadow: 0 0 0 3px rgba(46,117,182,0.15); }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #1F3864;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    button:hover { background: #2e75b6; }
+
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Contact Form</h2>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p class="note">Each label is linked via <code>for</code> and <code>id</code> — clicking a label focuses its input.</p>
+  </div>
+
+</body>
+</html>
