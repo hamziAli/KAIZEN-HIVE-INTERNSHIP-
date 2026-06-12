@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Styling Basics – Tasks 1–5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── Global Reset & Variables ─────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0e0e12;
+      --surface:  #16161e;
+      --border:   #2e2e3a;
+      --accent:   #6ee7f7;
+      --accent2:  #f7c06e;
+      --text:     #e8e8f0;
+      --muted:    #7a7a9a;
+      --radius:   10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      padding: 40px 20px 80px;
+      min-height: 100vh;
+    }
+
+    /* ── Page Header ──────────────────────────────────── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .page-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--accent);
+    }
+    .page-header p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 8px;
+    }
+
+    /* ── Task Card wrapper ────────────────────────────── */
+    .task {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .task-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 6px;
+    }
+    .task-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .output-label {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TASK 1 – Styled Heading
+    ══════════════════════════════════════════════════ */
+    .t1-heading {
+      color: blue;
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TASK 2 – Styled Button
+    ══════════════════════════════════════════════════ */
+    .t2-wrap {
+      text-align: center;
+    }
+    .t2-button {
+      padding: 12px 32px;
+      border: 2px solid #4a90d9;
+      border-radius: 8px;
+      background: #1a3a5c;
+      color: #c9e0f7;
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .t2-button:hover {
+      background: #2a5a8c;
+      transform: translateY(-1px);
+    }
+
+    /* ══════════════════════════════════════════════════
+       TASK 3 – Box Model Card
+    ══════════════════════════════════════════════════ */
+    .t3-card {
+      margin: 20px;
+      padding: 24px;
+      border: 2px solid #6ee7f7;
+      border-radius: 8px;
+      background-color: #1a2a3a;
+      color: #c9e8f7;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.95rem;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TASK 4 – Styled Table
+    ══════════════════════════════════════════════════ */
+    .t4-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .t4-table th,
+    .t4-table td {
+      border: 1px solid #4a5a6a;
+      padding: 10px 16px;
+      text-align: left;
+    }
+    .t4-table thead tr {
+      background-color: #b0c8e0;
+      color: #0e1620;
+    }
+    .t4-table tbody tr:nth-child(even) {
+      background-color: #1a2030;
+    }
+    .t4-table tbody tr:nth-child(odd) {
+      background-color: #141820;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TASK 5 – Centered Container
+    ══════════════════════════════════════════════════ */
+    .t5-outer {
+      /* overflow: hidden keeps the centered div visible */
+    }
+    .t5-container {
+      width: 400px;
+      border: 2px solid #6ee7f7;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 0 auto;
+      text-align: center;
+      background: #0e1a26;
+      color: #a8d8f0;
+      font-family: 'Space Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>CSS Styling Basics</h1>
+    <p>Practical Tasks 1 – 5 &nbsp;|&nbsp; Web Development</p>
+  </header>
+
+  <!-- ── Task 1 ── -->
+  <section class="task">
+    <p class="task-label">Task 01</p>
+    <h2 class="task-title">Style a Heading with CSS</h2>
+    <p class="output-label">Output</p>
+    <h1 class="t1-heading">Introduction to CSS</h1>
+  </section>
+
+  <!-- ── Task 2 ── -->
+  <section class="task">
+    <p class="task-label">Task 02</p>
+    <h2 class="task-title">Create a Styled Button</h2>
+    <p class="output-label">Output</p>
+    <div class="t2-wrap">
+      <button class="t2-button">Submit</button>
+    </div>
+  </section>
+
+  <!-- ── Task 3 ── -->
+  <section class="task">
+    <p class="task-label">Task 03</p>
+    <h2 class="task-title">CSS Box Model Card</h2>
+    <p class="output-label">Output</p>
+    <div class="t3-card">Web Development Task</div>
+  </section>
+
+  <!-- ── Task 4 ── -->
+  <section class="task">
+    <p class="task-label">Task 04</p>
+    <h2 class="task-title">Style a Table</h2>
+    <p class="output-label">Output</p>
+    <table class="t4-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ali</td><td>80</td></tr>
+        <tr><td>Sara</td><td>90</td></tr>
+        <tr><td>Ahmed</td><td>75</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── Task 5 ── -->
+  <section class="task">
+    <p class="task-label">Task 05</p>
+    <h2 class="task-title">Center a Web Page Container</h2>
+    <p class="output-label">Output</p>
+    <div class="t5-outer">
+      <div class="t5-container">Centered Content</div>
+    </div>
+  </section>
+
+</body>
+</html>
